@@ -14,26 +14,36 @@ import java.util.Random;
 public class Exercise2 {
     public static void main(String[] args) {
 
-            double[] list = new double[50];
-            Random random = new Random();
-            java.util.Scanner input = new java.util.Scanner(System.in);
-            double indexNumber = 0;
+        double[] list = new double[50];
+        Random random = new Random();
 
-            System.out.println("The last number in the array:  ");
+        //you need to make sure input the random value to list.
+        //use a for loop
+
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        int indexNumber = 0;
+
+        System.out.println("The last number in the array:  ");
+
+        //Use the example from RandomInput.java and ExceptionHandlingDemo.java
+        //to review about the Arrays, use ArrayDemo.java
+        //use a while loop
+        //
+        while () {
             try {
                 indexNumber = input.nextInt();
-                if(indexNumber != list.length - 1){
-                    throw new ArrayIndexOutOfBoundsException("You did not write the " +
-                            "correct index value. ");
-                }
-            }catch(IllegalArgumentException e){
-                System.out.println(e);
-                do{
-                    indexNumber = input.nextInt();
-                }while(indexNumber != list.length - 1);
+//                if(indexNumber != list.length - 1){
+//                    throw new ArrayIndexOutOfBoundsException("You did not write the " +
+//                            "correct index value. ");
             }
-
-            System.out.println(indexNumber  + " is " + list[indexNumber] );
+        }catch(IllegalArgumentException e){
+            System.out.println(e);
+//                do{
+//                    indexNumber = input.nextInt();
+//                }while(indexNumber != list.length - 1);
+        }
+    }
+          //  System.out.println(indexNumber  + " is " + list[indexNumber] );
         }
 
     }
