@@ -1,5 +1,9 @@
 package Chapter4;
 
+/**
+ * please also go to https://itec2140.gitlab.io/#_arrays_and_arraylists and
+ * review Arrays and ArrayList
+ */
 public class ArrayDemo {
     public static void main(String[] args) {
 
