@@ -9,42 +9,39 @@ Directions: Write a Java program to randomly creates an array of 50 double value
         Include exception handling that prevents the program from terminating if an out of
         range index is entered by the user. (HINT: The exception thrown will be ArrayIndexOutOfBounds)*/
 
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Exercise2 {
     public static void main(String[] args) {
 
         double[] list = new double[50];
-        Random random = new Random();
+        Random rand = new Random();
 
-        //you need to make sure input the random value to list.
-        //use a for loop
 
-        java.util.Scanner input = new java.util.Scanner(System.in);
         int indexNumber = 0;
+        for(int i = 0; i < 50; i++){
+            list[i] = rand.nextDouble();
+        }
+        // System.out.println(Arrays.toString(list));
 
-        System.out.println("The last number in the array:  ");
 
-        //Use the example from RandomInput.java and ExceptionHandlingDemo.java
-        //to review about the Arrays, use ArrayDemo.java
-        //use a while loop
-        //
-        while () {
+        Scanner input = new Scanner(System.in);
+        boolean continueInput = true;
+        do {
             try {
-                indexNumber = input.nextInt();
-//                if(indexNumber != list.length - 1){
-//                    throw new ArrayIndexOutOfBoundsException("You did not write the " +
-//                            "correct index value. ");
+                System.out.println("Enter an index: ");
+                int index = input.nextInt();
+                System.out.println("list[" + index + "] = " + list[index]); 	// ArrayIndexOutOfBoundsException thrown here if index is not 0-49
+                continueInput = false;											// only set false if no exception was thrown
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println(e + ". Try it again. Enter an integer");
+                input.nextLine(); // advance the Scanner past the previous input
             }
-        }catch(IllegalArgumentException e){
-            System.out.println(e);
-//                do{
-//                    indexNumber = input.nextInt();
-//                }while(indexNumber != list.length - 1);
-        }
+        }while(continueInput);
     }
-          //  System.out.println(indexNumber  + " is " + list[indexNumber] );
-        }
+}
 
-    }
+
 
