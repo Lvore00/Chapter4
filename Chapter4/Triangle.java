@@ -15,8 +15,6 @@ Directions: Create a custom Exception named IllegalTriangleSideException.
         the method will create and throw an IllegalTriangleSideException.
         Add a main method to create and check two to three different triangles.*/
 
-import ExceptionDemo.Circle.InvalidRadiusException;
-
 public class Triangle {
 
     private double s1;
